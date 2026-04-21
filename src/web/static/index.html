@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek V3.2 - AI Project Generator V5.5</title>
+    <meta name="description" content="Intelligent AI assistant specialized in both conversation and complete project generation. Full-stack development and project architecture.">
+    <meta name="keywords" content="AI, Project Generator, DeepSeek, Full-stack, Development, Architecture">
+    <meta name="author" content="AI Project Generator V5.5">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header with navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot logo-icon" aria-hidden="true"></i>
+                    <div class="logo-text">
+                        <h1 class="logo-title">DeepSeek V3.2</h1>
+                        <p class="logo-subtitle">AI Project Generator V5.5</p>
+                    </div>
+                </div>
+                
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#dashboard" class="nav-link" id="nav-dashboard">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#projects" class="nav-link" id="nav-projects">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#conversations" class="nav-link" id="nav-conversations">
+                                <i class="fas fa-comments" aria-hidden="true"></i>
+                                <span>Conversations</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#blueprints" class="nav-link" id="nav-blueprints">
+                                <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                                <span>Blueprints</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#settings" class="nav-link" id="nav-settings">
+                                <i class="fas fa-cog" aria-hidden="true"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                        <span class="sr-only">Toggle theme</span>
+                    </button>
+                    <button class="btn btn-primary" id="new-project-btn">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                        <span>New Project</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content" class="main-content" role="main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active" role="region" aria-labelledby="dashboard-heading">
+                <div class="section-header">
+                    <h2 id="dashboard-heading" class="section-title">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        Dashboard
+                    </h2>
+                    <p class="section-subtitle">Welcome to AI Project Generator V5.5</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Stats Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-title">Projects Generated</h3>
+                                <p class="stat-value" id="projects-count">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-comments" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-title">Conversations</h3>
+                                <p class="stat-value" id="conversations-count">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-file-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-title">Files Created</h3>
+                                <p class="stat-value" id="files-count">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-bolt" aria-hidden="true"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-title">System Status</h3>
+                                <p class="stat-value status-active">Active</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h3 class="quick-actions-title">Quick Actions</h3>
+                        <div class="actions-grid">
+                            <button class="action-btn" id="quick-new-project">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                                <span>New Project</span>
+                            </button>
+                            <button class="action-btn" id="quick-conversation">
+                                <i class="fas fa-comment" aria-hidden="true"></i>
+                                <span>Start Conversation</span>
+                            </button>
+                            <button class="action-btn" id="quick-blueprint">
+                                <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                                <span>View Blueprints</span>
+                            </button>
+                            <button class="action-btn" id="quick-docs">
+                                <i class="fas fa-book" aria-hidden="true"></i>
+                                <span>Documentation</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity -->
+                    <div class="recent-activity">
+                        <h3 class="recent-activity-title">Recent Activity</h3>
+                        <div class="activity-list" id="activity-list">
+                            <!-- Activity items will be populated by JavaScript -->
+                            <div class="activity-item">
+                                <i class="fas fa-info-circle activity-icon" aria-hidden="true"></i>
+                                <div class="activity-content">
+                                    <p class="activity-text">Welcome to AI Project Generator V5.5. Start by creating a new project or conversation.</p>
+                                    <span class="activity-time">Just now</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section" role="region" aria-labelledby="projects-heading" hidden>
+                <div class="section-header">
+                    <h2 id="projects-heading" class="section-title">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        Projects
+                    </h2>
+                    <div class="section-actions">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                            <input type="search" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+                        </div>
+                        <button class="btn btn-secondary" id="filter-projects">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                            <span>Filter</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="projects-container">
+                    <div class="projects-grid" id="projects-grid">
+                        <!-- Projects will be populated by JavaScript -->
+                        <div class="empty-state">
+                            <i class="fas fa-folder-open empty-icon" aria-hidden="true"></i>
+                            <h3 class="empty-title">No projects yet</h3>
+                            <p class="empty-description">Create your first project to get started</p>
+                            <button class="btn btn-primary" id="create-first-project">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                                <span>Create Project</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conversations Section -->
+            <section id="conversations" class="section" role="region" aria-labelledby="conversations-heading" hidden>
+                <div class="section-header">
+                    <h2 id="conversations-heading" class="section-title">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Conversations
+                    </h2>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" id="new-conversation">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                            <span>New Conversation</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="conversations-container">
+                    <div class="conversations-list" id="conversations-list">
+                        <!-- Conversations will be populated by JavaScript -->
+                        <div class="empty-state">
+                            <i class="fas fa-comments empty-icon" aria-hidden="true"></i>
+                            <h3 class="empty-title">No conversations yet</h3>
+                            <p class="empty-description">Start a conversation with the AI assistant</p>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-chat" id="conversation-chat">
+                        <div class="chat-header">
+                            <h3 class="chat-title">AI Assistant</h3>
+                            <p class="chat-subtitle">Ready to help with your project needs</p>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message ai-message">
+                                <div class="message-avatar
