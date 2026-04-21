@@ -1,0 +1,121 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@types/*": ["types/*"],
+      "@hooks/*": ["hooks/*"],
+      "@styles/*": ["styles/*"]
+    },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "preserveSymlinks": true,
+    
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    
+    /* Advanced Options */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    
+    /* Output Formatting */
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "importHelpers": true,
+    
+    /* Interop Constraints */
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    
+    /* Language and Environment */
+    "useDefineForClassFields": true,
+    "moduleDetection": "force"
+  },
+  
+  /* Include/Exclude Configuration */
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "types/**/*.d.ts",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "*.test.ts",
+    "*.test.tsx",
+    "*.spec.ts",
+    "*.spec.tsx",
+    "**/__tests__/**",
+    "**/__mocks__/**"
+  ],
+  
+  /* TypeScript Project References */
+  "references": [],
+  
+  /* Watch Options */
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "dist", "build"]
+  },
+  
+  /* Build Configuration */
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
